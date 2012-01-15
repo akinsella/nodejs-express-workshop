@@ -1,0 +1,38 @@
+<!--
+    h1= title
+        #articles
+            - each article in articles
+              div.article
+                div.created_at= article.created_at
+                div.title
+                    a(href="/article/"+article._id)!= article.title
+                div.body= article.body
+-->
+
+<html>
+
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    </head>
+
+    <body>
+
+        <h1>{{title}}</h1>
+
+        <div id="articles">
+            {{#articles}}
+                <div id="created_at">{{created_at}}</div>
+                <div id="title"><a href="/article/{{id}}">{{title}}</a></div>
+                <div id="body">{{body}}</div>
+            {{/articles}}
+
+            {{^articles}}
+              No articles found :(
+            {{/articles}}
+        </div>
+
+    </body>
+
+
+</html>

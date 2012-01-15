@@ -1,0 +1,31 @@
+{
+    "name": "nodejs-express-workshop",
+    "description": "Node.js & Express Workshop",
+    "version": "1.0.0-SNAPSHOT",
+    "author":"Alexis Kinsella <akinsella@helyx.org>",
+    "engines": {
+        "node":">= 0.6.0 < 0.7.0"
+    },
+    "keywords": ["express", "node.js", "workshop"],
+    "repository": "git://github.com/akinsella/nodejs-express-workshop",
+    "main": "app",
+    "bin": {
+        "express": "./bin/express"
+    },
+    "contributors": [
+        { "name":"Alexis Kinsella", "email":"akinsella@helyx.org" }
+    ],
+    "dependencies": {
+        "express": ">= 2.3.5",
+        "hogan.js": "*",
+        "stylus": "*",
+        "underscore": "*",
+        "mongodb": ">= 0.9.6-7"
+    },
+    "devDependencies": {
+    },
+    "scripts": {
+        "prepublish": "npm prune",
+        "test": "make test"
+    }
+}
